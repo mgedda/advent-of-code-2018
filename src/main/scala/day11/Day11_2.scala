@@ -35,11 +35,7 @@ object Day11_2
   {
     val rackId = x + 10
     val powerLevel = (rackId * y + serial) * rackId
-    val digit = if (powerLevel < 100)
-      0
-    else
-      (powerLevel / 100) % 10
-    digit - 5
+    (powerLevel / 100) % 10 - 5
   }
 
   def largestTotalPower(serial: String) : (Int, Int, Int) =
